@@ -1,0 +1,16 @@
+#!/bin/bash
+# cloud-init script template
+# Variables disponibles: ${hostname}
+
+# Configure hostname
+hostnamectl set-hostname ${hostname}
+
+# Install Docker (exemple)
+apt-get update
+apt-get install -y docker.io docker-compose
+
+# Enable Docker
+systemctl enable docker
+systemctl start docker
+
+echo "VM ${hostname} initialized at $(date)" > /var/log/cloud-init-output.log
