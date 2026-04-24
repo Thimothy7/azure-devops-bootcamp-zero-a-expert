@@ -1,0 +1,21 @@
+// .vscode/settings.json
+{
+  // Active le serveur de langage Terraform
+  "terraform.languageServer": {
+    "enabled": true,     // true = active l'autocomplétion
+    "args": ["serve"]    // commande pour démarrer le serveur
+  },
+  
+  // Formatage automatique quand vous sauvegardez
+  "[terraform]": {
+    "editor.formatOnSave": true,  // format auto à la sauvegarde
+    "editor.tabSize": 2,          // indentation de 2 espaces
+    "editor.insertSpaces": true   // utilise des espaces, pas des tabulations
+  },
+  
+  // Ignore le dossier .terraform (où sont les providers)
+  "terraform.format": {
+    "recursive": true,              // formate aussi les sous-dossiers
+    "ignore-path": ".terraform"     // ne pas toucher ce dossier
+  }
+}
