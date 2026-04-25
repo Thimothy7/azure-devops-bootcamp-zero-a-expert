@@ -47,6 +47,10 @@ resource "azurerm_resource_group" "example" {
 # Que se passe-t-il ? Crée un dossier .terraform avec les providers
 terraform init
 
+terraform fmt
+terraform validate
+terraform test
+
 # ÉTAPE 2: terraform plan
 # Pourquoi ? Voir ce qui va être créé/modifié/supprimé
 # Que se passe-t-il ? Compare votre code avec ce qui existe dans Azure
